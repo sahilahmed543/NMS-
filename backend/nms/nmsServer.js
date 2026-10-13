@@ -30,10 +30,39 @@ const devices = [
         status: "Offline"
     }
 ];
+const alarms = [
+    {
+        id: "A001",
+        deviceId: "R001",
+        severity: "Warning",
+        message: "High CPU utilization",
+        status: "Active",
+        time: new Date().toISOString()
+    },
+    {
+        id: "A002",
+        deviceId: "S001",
+        severity: "Critical",
+        message: "Device is offline",
+        status: "Active",
+        time: new Date().toISOString()
+    },
+    {
+        id: "A003",
+        deviceId: "R002",
+        severity: "Info",
+        message: "Device connectivity verified",
+        status: "Active",
+        time: new Date().toISOString()
+    }
+];
 
 // Get all devices
 app.get("/nms/devices", (req, res) => {
     res.json(devices);
+});
+app.get("/nms/alarms", (req, res) => {
+    res.json(alarms);
 });
 
 // Get one device

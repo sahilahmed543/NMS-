@@ -7,8 +7,8 @@ const JWT_SECRET = "nms-project-secret-key";
 const users = [
     {
         id: 1,
-        username: "admin",
-        password: bcrypt.hashSync("admin123", 10),
+        username: "sahil_admin",
+        password: bcrypt.hashSync("sahil123", 10),
         role: "admin"
     },
     {
